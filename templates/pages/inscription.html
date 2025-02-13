@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block content %}
+<div class="container mt-5 bg-success-subtle">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4 text-success">Inscription (UCAB)</h2>
+        
+       
+        
+        <form method="POST" enctype="multipart/form-data" class="needs-validation" novalidate>
+            {% csrf_token %}
+            
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="nom" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="nom" name="nom" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="prenom" class="form-label">Prénom</label>
+                    <input type="text" class="form-control" id="prenom" name="prenom" required>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="adresse" class="form-label">Adresse</label>
+                <input type="text" class="form-control" id="adresse" name="adresse" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="photo_id" class="form-label">Photocopie d'identité</label>
+                    <input type="file" class="form-control" id="photo_id" name="photo_id" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="extrait_naissance" class="form-label">Extrait de naissance</label>
+                    <input type="file" class="form-control" id="extrait_naissance" name="extrait_naissance" required>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="releve_bac" class="form-label">Relevé de notes du bac</label>
+                    <input type="file" class="form-control" id="releve_bac" name="releve_bac" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="diplome_bac" class="form-label">Diplôme du bac légalisé</label>
+                    <input type="file" class="form-control" id="diplome_bac" name="diplome_bac" required>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="photo_etudiant" class="form-label">Photo de l'étudiant</label>
+                <input type="file" class="form-control" id="photo_etudiant" name="photo_etudiant" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="payment" class="form-label">Paiement (26 000 FCFA via Wave ou Orange Money)</label>
+                <input type="text" class="form-control" id="payment" name="payment" placeholder="Numéro de transaction" required>
+            </div>
+            
+            <div class="d-grid">
+                <button type="submit" class="btn btn-success">S'inscrire</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

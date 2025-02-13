@@ -1,0 +1,26 @@
+.btn-connexion {
+    background-color: white;
+    color: green;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-connexion:hover {
+    background-color: green;
+    color: white;
+}
+
+
+.banner {
+    margin: 0;
+    background: url('/static/images/img-ucab.jpg') no-repeat center center/cover;
+    width: 100%;
+    min-height: 100vh; /* Occupe toute la hauteur de l'écran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

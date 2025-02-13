@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}inscriptions UCAB{% endblock %}
+
+{% block content %}
+
+    <header class="text-center text-white d-flex justify-content-center m-0"
+        style="background: url('{% static 'images/img-ucab.jpg' %}') no-repeat center center/cover;
+        min-height: 100vh; margin: 0; padding: 0; overflow: hidden;">
+    <div class="container">
+        <h1 class="fw-bold text-success" style="margin-top: 100px">Bienvenue à l'UCAB</h1>
+        <p class="text-dark-emphasis fw-bold">
+            Université Cheikh Ahmadou Bamba (UCAB) forme par <span class="text-bg-success">Serigne Mame Mor Mbacké</span>.<br>
+            À travers ses programmes variés et adaptés aux besoins du monde moderne, l'UCAB propose une formation<br> d'excellence qui allie tradition et innovation. L'université a reçu un point d'honneur pour offrir un cadre d'apprentissage de qualité,<br> avec des enseignants qualifiés et un accompagnement personnel.
+        </p>
+        <p class="lead text-dark fw-bold">Une formation de qualité pour un avenir meilleur</p>
+        <a href="{% url 'inscription' %}" class="btn btn-success btn-lg mt-3">S'inscrire</a>
+    </div>
+    </header>
+
+
+
+{% comment %} a propos {% endcomment %}
+<section class="container my-5 text-success">
+    <h2 class="text-center fw-bold">À propos de l'UCAB</h2>
+    <p class="text-center">
+        L'Université Cheikh Ahmadou Bamba (UCAB) est une institution d'excellence qui forme des leaders dans divers domaines.
+    </p>
+</section>
+
+{% comment %} section filieres {% endcomment %}
+<section class="container my-5">
+    <h2 class="text-center text-success fw-bold">Nos Filières</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card bg-light text-success shadow-sm p-3">
+                <h5 class="fw-bold">Informatique de Gestion</h5>
+                <p>Apprenez les dernières technologies en programmation et en cybersécurité.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light text-success shadow-sm p-3">
+                <h5 class="fw-bold">Electro-Mecanique</h5>
+                <p>Devenez un expert en Electro-Mecanique.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-light text-success shadow-sm p-3">
+                <h5 class="fw-bold">Administration</h5>
+                <p>Une formation complète en Administration pour une carrière réussie.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+

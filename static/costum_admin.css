@@ -1,0 +1,19 @@
+/* Modifier la couleur du header (barre supérieure) */
+#header {
+    background-color: #198754 !important; /* Couleur verte Bootstrap (bg-success) */
+}
+
+/* Modifier la couleur de la sidebar (menu de gauche) */
+#content-related {
+    background-color: #198754 !important; /* Même couleur verte */
+    color: white !important;
+}
+
+/* Modifier la couleur des liens du menu */
+#content-related a {
+    color: white !important; /* Texte blanc */
+}
+
+#content-related a:hover {
+    color: #d4edda !important; /* Vert clair au survol */
+}

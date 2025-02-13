@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Connexion - UCAB{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center vh-100" style="background: url('{% static 'images/img-ucab.jpg' %}') no-repeat center center; background-size: cover;">
+    <div class="card shadow p-4" style="width: 350px; background-color: rgba(255, 255, 255, 0.9); border-radius: 10px;">
+        <div class="text-center">
+            <img src="{% static 'images/logo_ucab.jpg' %}" alt="UCAB" width="80">
+            <h4 class="mt-2 fw-bold text-success">Connexion</h4>
+        </div>
+        
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Nom d'utilisateur</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+
+            {% if messages %}
+                <div class="alert alert-danger p-2">
+                    {% for message in messages %}
+                        <p class="m-0">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <button type="submit" class="btn btn-success w-100">Se connecter</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <p>Pas encore de compte ? <a href="{% url 'inscription' %}" class="text-success">S'inscrire</a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
