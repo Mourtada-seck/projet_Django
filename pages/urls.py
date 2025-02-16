@@ -1,7 +1,10 @@
+from django.contrib import admin
 from django.urls import path
 from .views import home, login_view, inscription_view, logout_view, admin_dashboard
 
+
 urlpatterns = [
+    path("admin/", admin.site.urls),
     path("", home, name="home"),
     path("login/", login_view, name="login"),
     path("inscription/", inscription_view, name="inscription"),
